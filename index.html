@@ -1,0 +1,218 @@
+<!--  Soli Deo Gloria  -->
+<!DOCTYPE html>
+<html lang="pt">
+  <div class="container">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Exemplo de formulário</title>
+      <link rel="stylesheet" href="./style.css" />
+    </head>
+
+    <header class="header">
+      <!-- Título no topo da página  -->
+      <h1 id="title" class="text-center">Exemplo de formulário básico</h1>
+      <!-- Parágrafo de agradecimento  -->
+      <p id="description" class="description text-center">
+        Formulário básico para testar campos.
+      </p>
+    </header>
+    <!--  Tag de formulário, para adicionar campos para input do usuário  -->
+    <form id="survey-form">
+      <div class="form-group">
+        <!--  Campo de texto  -->
+        <label id="name-label" for="name">Nome</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="form-control"
+          placeholder="Insira seu nome"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          placeholder="Insira seu Email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <!--  Campo para a idade.  -->
+        <label id="number-label" for="number"
+          >Idade<span class="clue">(opcional)</span></label
+        >
+        <input
+          type="number"
+          name="age"
+          id="number"
+          min="10"
+          max="99"
+          class="form-control"
+          placeholder="Sua idade"
+        />
+      </div>
+      <div class="form-group">
+        <!--  parágrafo com pergunta e as opções disponíveis para o "Escolha um"  -->
+        <p>Qual opção melhor descreve sua situação?</p>
+        <select id="dropdown" name="role" class="form-control" required>
+          <option disabled selected value>Selecione uma opção</option>
+          <option value="student">Estudante</option>
+          <option value="learner">Estudante em tempo integral</option>
+          <option value="job">Empregado em tempo integral</option>
+          <option value="preferNo">Prefiro não dizer</option>
+          <option value="other">Outro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <!--  Parágrafo com a pergunta  -->
+        <p>Qual o seu sexo?</p>
+        <!--  3 labels, um para cada opção  -->
+        <label>
+          <!--  Primeira opção marcada como padrão  -->
+          <input
+            name="user-recommend"
+            value="definitely"
+            type="radio"
+            class="input-radio"
+            checked
+          />Masculino</label
+        >
+        <label>
+          <input
+            name="user-recommend"
+            value="maybe"
+            type="radio"
+            class="input-radio"
+          />Feminino</label
+        >
+        <label
+          ><input
+            name="user-recommend"
+            value="not-sure"
+            type="radio"
+            class="input-radio"
+          />Prefiro não informar</label
+        >
+      </div>
+      <!--  Semelhante ao de cima, porém o type do label é diferente, o que permite mais de uma opção ser selecionada  -->
+      <div class="form-group">
+        <p>
+          Quais generos de jogos você gosta de jogar?
+          <span class="clue">(Marque quantas opções quiser)</span>
+        </p>
+
+        <label
+          ><input
+            name="prefer"
+            value="front-end-projects"
+            type="checkbox"
+            class="input-checkbox"
+          />RPG de turnos</label
+        >
+        <label>
+          <input
+            name="prefer"
+            value="back-end-projects"
+            type="checkbox"
+            class="input-checkbox"
+          />RPG de Ação</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="data-visualization"
+            type="checkbox"
+            class="input-checkbox"
+          />FPS</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="challenges"
+            type="checkbox"
+            class="input-checkbox"
+          />Estratégia</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="open-source-community"
+            type="checkbox"
+            class="input-checkbox"
+          />Administração de base</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="gitter-help-rooms"
+            type="checkbox"
+            class="input-checkbox"
+          />RTS</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="videos"
+            type="checkbox"
+            class="input-checkbox"
+          />Hack and Slash</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="city-meetups"
+            type="checkbox"
+            class="input-checkbox"
+          />Mundo Aberto</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="wiki"
+            type="checkbox"
+            class="input-checkbox"
+          />Simulador</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="forum"
+            type="checkbox"
+            class="input-checkbox"
+          />Puzzle</label
+        >
+        <label
+          ><input
+            name="prefer"
+            value="additional-courses"
+            type="checkbox"
+            class="input-checkbox"
+          />Romance Visual</label
+        >
+      </div>
+      <!--  Área de texto para o usuário expressar sua ideia livremente  -->
+      <div class="form-group">
+        <p>Algum comentário ou sugestão?</p>
+        <textarea
+          id="comments"
+          class="input-textarea"
+          name="comment"
+          placeholder="Escreva seu comentário aqui..."
+        ></textarea>
+      </div>
+
+      <!--  Botão de enviar  -->
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">Enviar</button>
+      </div>
+    </form>
+  </div>
+  <script src="./script.js"></script>
+</html>
